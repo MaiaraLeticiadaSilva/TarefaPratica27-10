@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Faça um programa que solicite que o usuário informe os dados de um série de imóveis. 
+        Para cada imóvel informado deve ser criado um objeto com as propriedades:Área, tipo e endereço. 
+        cada um destes objetos deve ser armazenado em um array. 
+        Após o usuário decidir não mais informar dados de imóveis, o programa deve exibir no console a lista com os imóveis informados. A lista exibida no console, deve seguir 
+        o seguinte formato: Casa com 150 metros quadrados, localizada na Rua Sem Fim, 656 - Centro - Taquara - RS*/
+        let imoveis=[]
+        do{
+            let imovel={area:"", tipo:"", endereço:""}
+            imovel.area=prompt("Informe a área do imóvel:", " ")
+            imovel.tipo=prompt("Agora informe o tipo do imóvel: ")
+            imovel.endereço=prompt("Por último, informe o endereço do imóvel: ")
+            imoveis.push(imovel)
+        }while(confirm("Pretende adicionar mais algum imóvel?"))
+        for(i=0; i<imoveis.length; i++){
+            let imovel=imoveis[i]
+            console.log(imovel.tipo+" com "+imovel.area+", localizado em "+imovel.endereço)
+        }
+    </script>
+</body>
+</html>
